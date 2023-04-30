@@ -31,6 +31,16 @@ def check_git_clone():
     result = os.system("git --version")
     return result == 0
 
+def confirm(prompt):
+    while True:
+        response = input(prompt + ' (y/n): ').lower()
+        if response == 'y' or response == 'yes':
+            return True
+        elif response == 'n' or response == 'no':
+            return False
+        else:
+            print('Invalid response. Please enter y or n.')
+
 
 def clear_screen():
     if platform.system() == "Windows":
@@ -221,7 +231,10 @@ while True:
             sys.exit()
     except KeyboardInterrupt:
         clear_screen()
-        print(f"{emoji.emojize(':exploding_head:')}\033[1;32;40mGoodbye!\033[0m")
-        sys.exit()
+        if confirm('Are you sure you want to jailbreak your system?'):
+            print(f"{emoji.emojize(':exploding_head:')}\033[1;32;40mGoodbye!\033[0m")
+            sys.exit()
+        else:
+            main()
     except Exception as e:
         print(f"{emoji.emojize(':exploding_head:')}Error: ", e)
