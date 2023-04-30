@@ -231,8 +231,8 @@ while True:
             sys.exit()
     except KeyboardInterrupt:
         clear_screen()
-        if confirm('Are you sure you want to jailbreak your system?'):
-            print(f"{emoji.emojize(':exploding_head:')}\033[1;32;40mGoodbye!\033[0m")
+        if confirm('Are you sure you want leave this program'):
+            print(f"\n{emoji.emojize(':exploding_head:')}\033[1;32;40mGoodbye!\033[0m")
             sys.exit()
         else:
             main()
