@@ -1,6 +1,5 @@
 import importlib
-
-required_packages = ['os', 'sys', 'random', 'time', 'platform', 'tqdm', 'emoji']
+required_packages = ['os', 'sys', 'random', 'time', 'platform', 'tqdm', 'emoji',, "validators"]
 for package in required_packages:
     try:
         importlib.import_module(package)
@@ -9,7 +8,7 @@ for package in required_packages:
         print(f"{package} is not installed.")
         os.system(f"pip install ",package)
         sys.exit()
-
+import validators
 import sys
 import os
 import random 
