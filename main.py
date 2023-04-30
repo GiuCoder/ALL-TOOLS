@@ -44,6 +44,7 @@ def clear_screen():
 
 def jailbreak():
     os.system("git clone https://github.com/GiuCoder/ChatGPT-JAILBREAK-CAN-.git")
+    
 
 
 def hide():
@@ -58,6 +59,8 @@ def hide():
     
     # Move hidemyip.sh to /usr/bin/
     os.system("sudo mv hidemyip.sh /usr/bin/")
+    input("\nPress ENTER TO CONTINUE")
+
     
     
 
@@ -75,6 +78,8 @@ def secure():
 
     # Run the securethelinux.sh script
     os.system("./securethelinux.sh")
+    input("\nPress ENTER TO CONTINUE")
+
 
 
 def ddos():
@@ -93,6 +98,7 @@ def ddos():
 
     # Run the ddos_web.py script with the -h flag to show help information
     os.system("python3 ddos_web.py -h")
+    input("\nPress ENTER TO CONTINUE")
 
 
 def ipscanner():
@@ -108,6 +114,7 @@ def ipscanner():
 
     # Run the scanner
     os.system("python3 scanner.py")
+    input("\nPress ENTER TO CONTINUE")
 
 
 def installer():
@@ -144,12 +151,15 @@ def gatherinformationweb():
     os.system("apt-get install git")
     os.system(
         "git clone https://github.com/GiuCoder/WebsiteGatheringInformation.git")
+    os.chdir("WebsiteGatheringInformation")
     os.system("cd WebsiteGatheringInformation")
     os.system("apt-get install python3")
     os.system("clear")
     os.system("pip install emoji termcolor emojize validators")
     os.system("clear")
     os.system("python3 main.py")
+    input("\nPress ENTER TO CONTINUE")
+
 
 
 def ipinfo():
@@ -158,12 +168,15 @@ def ipinfo():
     os.system('sudo apt-get install git python3 python3-pip')
     os.system('clear')
     os.system('git clone https://github.com/GiuCoder/INFORMATION-IP-GATHERING.git')
+    os.chdir("INFORMATION-IP-GATHERING")
     os.system('clear')
     os.chdir('INFORMATION-IP-GATHERING')
     os.system('clear')
     os.system('pip install -r requirements.txt')
     os.system('clear')
     os.system('python3 main.py')
+    input("\nPress ENTER TO CONTINUE")
+
 
 
 # Map user input to corresponding function
