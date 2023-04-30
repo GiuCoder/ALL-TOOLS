@@ -1,5 +1,5 @@
 import importlib
-required_packages = ['os', 'sys', 'random', 'time', 'platform', 'tqdm', 'emoji', "validators"]
+required_packages = ['os', 'sys', 'random', 'time', 'platform', 'tqdm', 'emoji']
 for package in required_packages:
     try:
         importlib.import_module(package)
@@ -25,7 +25,7 @@ import os
 import emoji
 
 platforms = platform.system()
-
+os.system("pip install validators")
 
 def check_git_clone():
     result = os.system("git --version")
