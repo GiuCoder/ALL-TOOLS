@@ -1,5 +1,5 @@
 import importlib
-required_packages = ['os', 'sys', 'random', 'time', 'platform', 'tqdm', 'emoji',, "validators"]
+required_packages = ['os', 'sys', 'random', 'time', 'platform', 'tqdm', 'emoji', "validators"]
 for package in required_packages:
     try:
         importlib.import_module(package)
